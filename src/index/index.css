@@ -1,0 +1,22 @@
+@import 'properties.css';
+
+@lost flexbox flex;
+@lost gutter var(--spacing);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--white);
+  margin: 0;
+  font-family: 'Avenir Next', sans-serif;
+}
+
+a {
+  color: var(--black);
+}

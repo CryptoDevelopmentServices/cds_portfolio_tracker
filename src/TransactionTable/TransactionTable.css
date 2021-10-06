@@ -1,0 +1,47 @@
+@import '../index/properties.css';
+
+.transaction-table table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+
+  & thead {
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+
+    & th {
+      padding: calc(var(--spacing) * 0.5) 0;
+
+      &.kind {
+        width: 1.25rem;
+
+        @media (--tablet) {
+          & {
+            width: 4rem;
+          }
+        }
+      }
+
+      &.actions {
+        width: 2rem;
+
+        @media (--tablet) {
+          width: initial;
+        }
+      }
+    }
+  }
+
+  & .timestamp {
+    display: none;
+
+    @media (--tablet) {
+      & {
+        display: table-cell;
+      }
+    }
+  }
+}

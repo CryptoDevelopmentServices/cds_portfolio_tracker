@@ -1,0 +1,40 @@
+@import '../index/properties.css';
+
+.footer {
+  margin-top: var(--phone-section-spacing);
+  border-top: 1px solid var(--border-color);
+
+  & .inner {
+    padding: 1rem;
+
+    @media (--tablet) {
+      & {
+        lost-flex-container: row;
+        width: var(--container-width);
+        margin: 0 auto;
+      }
+
+      & .info,
+      & .addresses {
+        lost-column: 1/2;
+      }
+    }
+
+    & .home,
+    & .github {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    & .addresses {
+      display: none;
+
+      @media (--tablet) {
+        & {
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

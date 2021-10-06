@@ -1,0 +1,46 @@
+@import '../index/properties.css';
+
+input,
+select,
+button {
+  background: var(--white);
+  outline: none;
+  appearance: none;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  text-align-last: center;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: border 0.5s;
+
+  &:focus {
+    border: 1px solid var(--border-color-focus);
+    transition: border 0.5s;
+  }
+}
+
+button {
+  &.squared {
+    width: initial;
+    padding: 0.5rem 0.6rem;
+  }
+
+  &.action {
+    cursor: pointer;
+    background: var(--primary-color);
+    transition: background 0.5s;
+
+    &:disabled {
+      cursor: not-allowed;
+      background: color(var(--primary-color) w(50%));
+      transition: background 0.5s;
+    }
+
+    & img {
+      filter: brightness(0) invert(1);
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
