@@ -9,7 +9,7 @@ module Decode = {
     symbol: field("symbol", string, json),
     /* Price for both might be `null` */
     usd_rate:
-      try (field("price_usd", string, json) |> fs) {
+      try (field("price", string, json) |> fs) {
       | DecodeError(_) => 0.0
       },
     btc_rate:
