@@ -6,7 +6,7 @@ const updatePrices = response => ({
 });
 
 export const getPrices = currencyData => dispatch =>
-  fetch(`https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=${currencyData.map(currency => currency.name).join()}`)
+  fetch(`https://api.coinpaprika.com/v1/tickers/${currencyData.map(currency => currency.name).join()}`)
     .then(response => response.json())
     .then(apiResult => dispatch(updatePrices(currencyData.map(crypto => 1 / apiResult[crypto.name]))), err => err);
 

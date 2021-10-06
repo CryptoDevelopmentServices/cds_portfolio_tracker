@@ -50,9 +50,9 @@ const defaultState = [
     color: '#CD4A17',
   },
   {
-    name: 'BCH',
+    name: 'CDS',
     amount: 0,
-    fullName: 'Bitcoin Cash',
+    fullName: 'Crypto Development Services',
     color: '#1CAADE',
   },
 ];
