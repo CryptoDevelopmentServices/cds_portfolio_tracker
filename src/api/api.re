@@ -1,3 +1,3 @@
 module Cash = ApiFixer;
 
-module Crypto = ApiCoinPaprika;
+module Crypto = ApiCoinMarketCap;
