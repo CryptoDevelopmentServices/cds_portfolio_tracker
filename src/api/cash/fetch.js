@@ -1,5 +1,5 @@
 exports.fetch = () =>
-  fetch('https://api.exchangeratesapi.io/latest?base=USD')
+  fetch('http://api.exchangeratesapi.io/v1/latest?access_key=f818efda12a862f5b1edb2eb1022b245&symbols=USD,AUD,CAD,PLN,MXN&format=1')
     .then(res => res.json())
     .then(({ rates }) => [
       { id: 'usd', code: 'USD', usd_rate: 1.0 },
